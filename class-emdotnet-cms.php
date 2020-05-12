@@ -71,7 +71,7 @@ final class EMdotNet_CMS {
         $this->define( 'EMDOTNET_CMS_VERSION', $this->version );
         $this->define( 'EMDOTNET_PATH', plugin_dir_path( __FILE__ ) );
         $this->define( 'EMDOTNET_URL', plugin_dir_url( __FILE__ ) );
-        $this->define( 'EMDOTNET_BASE', plugin_basename( BOOMI_CMS_PLUGIN_FILE ) );
+        $this->define( 'EMDOTNET_BASE', plugin_basename( EMDOTNET_CMS_PLUGIN_FILE ) );
     }
 
     /**
@@ -95,7 +95,7 @@ final class EMdotNet_CMS {
      * @return void
      */
     public function includes() {
-        include_once( BOOMI_PATH . 'admin/class-boomi-cms-admin.php' );
+        //include_once( EMDOTNET_PATH . 'admin/class-boomi-cms-admin.php' );
 
     }
 
@@ -134,10 +134,10 @@ final class EMdotNet_CMS {
      * @return void
      */
     public function load_includes() {
-        $dirs = array( 'post-types' );
+        $dirs = array( 'post-types', 'taxonomies' );
 
         foreach ( $dirs as $dir ) :
-            foreach ( glob( BOOMI_PATH . $dir . '/*.php' ) as $file ) :
+            foreach ( glob( EMDOTNET_PATH . $dir . '/*.php' ) as $file ) :
                 include_once( $file );
             endforeach;
         endforeach;

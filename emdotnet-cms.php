@@ -17,11 +17,11 @@ if ( ! defined( 'WPINC' ) ) {
     die;
 }
 
-if ( ! defined( EMDOTNET_CMS_PLUGIN_FILE' ) ) {
+if ( ! defined( 'EMDOTNET_CMS_PLUGIN_FILE' ) ) {
     define( 'EMDOTNET_CMS_PLUGIN_FILE', __FILE__ );
 }
 
-// Include the main Boomi_CMS class.
-if ( ! class_exists( 'Boomi_CMS' ) ) {
+// Include the main EMdotNet_CMS class.
+if ( ! class_exists( 'EMdotNet_CMS' ) ) {
     include_once dirname( __FILE__ ) . '/class-emdotnet-cms.php';
 }
