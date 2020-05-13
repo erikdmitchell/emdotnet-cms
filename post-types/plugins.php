@@ -45,7 +45,6 @@ function plugins_init() {
 		'show_in_rest'          => true,
 		'rest_base'             => 'plugins',
 		'rest_controller_class' => 'WP_REST_Posts_Controller',
-		'taxonomies'            => array( 'post_tag' ), 
 	) );
 
 }
